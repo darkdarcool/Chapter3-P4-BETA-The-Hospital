@@ -408,3 +408,538 @@ os.system('clear')
 sp(yellow + 'Then they looked at a big sign.\n"HEY!! This isn\'t floor 4! This is floor 2!" James said. "I guess the scar know were coming and cut the cables. But I garuntee there are move elevators, each going up one more floor, now lets get going, and no doubt there will be tons of scars in the way! ')
 time.sleep(2)
 os.system('clear')
+sp(blue + '[They walked out of the elevator to floor 2]\n"Hmmmm, acording to they scematics, we have to go over there, the hallway that leads to the emergency care" James said')
+time.sleep(2)
+os.system('clear')
+sp('They walk to the hallway and they see 4 scars coming twords them "There they are! GET THEM!!!!!" one of the scar said.')
+time.sleep(2)
+os.system('clear')
+
+
+
+print(yellow + """             
+						Battle!!!""")
+
+print(blue + "              PRESS ENTER")
+
+blank = ''
+inpt = input('')
+if inpt == blank:
+    os.system("clear")
+elif input != blank:
+    print(red + 'Please press Enter')
+else:
+    print(red + 'An Error occured.\nPress Enter')
+time.sleep(2)
+os.system('clear')
+
+## Now, the game
+enemies = [
+    'Scar slave', 'scar follower', 'scar leader', 'scar fighter', 'scar spy'
+]
+
+enemy_name = random.choice(enemies)
+enemy_health = 120
+enemy_accuracy = 0.4
+enemy_damage = 15
+
+player_health = 80
+player_accuracy = 0.8
+player_damage = player_damage1
+heals_left = 3
+heal_amount = 10
+
+
+def heal_player(amount):
+    global player_health
+
+    player_health += amount
+    player_health = player_health + amount
+
+
+def attack_enemy(amount):
+    global enemy_health
+    enemy_health -= amount
+    print('You hit the enemy with your bat!!!')
+
+
+def attack_player(amount):
+    global player_health
+    player_health -= amount
+    print('You were hit by the enemies bat! ')
+
+
+print('A ' + enemy_name + ' has challenged you to a fight! ')
+print()
+while player_health > 0:
+    print(enemy_name + ' HP: ' + str(enemy_health))
+    print('Your HP: ' + str(player_health))
+    print('Bandages left: ' + str(heals_left))
+    print()
+    action = input('Attack or heal? ')
+    print()
+
+    if action == "attack":
+        player_roll = random.randint(1, 10)
+
+        if player_roll < player_accuracy * 10:
+            attack_enemy(player_damage)
+
+            if enemy_health <= 0:
+                print('You win, you beat (a) (the) ' + enemy_name +
+                      '. You have received the potion!!!')
+                break
+
+        else:
+            print('You missed your shot!')
+
+    elif action == 'heal':
+        if player_health == 80:
+            print('You have full health, you cannot use a bandage.')
+        else:
+            if heals_left:
+                heal_player(heal_amount)
+                heals_left -= 1
+            else:
+                print('You are out of bandages!!')
+
+    time.sleep(1)
+    enemy_roll = random.randint(1, 10)
+    if enemy_roll < enemy_accuracy * 10:
+        attack_player(enemy_damage)
+
+        if player_health <= 0:
+            print('You got pummeled by the enemies bat.... :( ')
+            break
+
+    else:
+        print(enemy_name + ' missed! ')
+
+    print()
+    print('******************')
+    print()
+
+if player_health <= 0:
+    sp('You sadly lost against the ' + enemy_name + ', would you like to restart the battle?'
+       )
+    time.sleep(1)
+    sp('Y/N')
+    toy = input('      >>>>>>>  ').upper()
+    toy = toy.upper()
+    if toy == 'Y':
+      sp('TOO BAD')
+
+    elif toy == 'N':
+      sp('Your loss')
+      sys.exit()
+elif enemy_health <= 0:
+  print('You won!')
+  time.sleep(2)
+  os.system('clear')
+  pass
+  
+
+
+
+    #Fix, set player to line to 276
+
+sp('You got to live!!')
+sp('One down, 3 to go!')
+time.sleep(2)
+os.system('clear')
+
+
+print(yellow + """             
+						Battle!!!""")
+
+print(blue + "              PRESS ENTER")
+
+blank = ''
+inpt = input('')
+if inpt == blank:
+    os.system("clear")
+elif input != blank:
+    print(red + 'Please press Enter')
+else:
+    print(red + 'An Error occured.\nPress Enter')
+time.sleep(2)
+os.system('clear')
+
+## Now, the game
+enemies = [
+    'Scar slave', 'scar follower', 'scar leader', 'scar fighter', 'scar spy'
+]
+
+enemy_name = random.choice(enemies)
+enemy_health = 120
+enemy_accuracy = 0.4
+enemy_damage = 15
+
+player_health = 80
+player_accuracy = 0.8
+player_damage = player_damage1
+heals_left = 3
+heal_amount = 10
+
+
+def heal_player(amount):
+    global player_health
+
+    player_health += amount
+    player_health = player_health + amount
+
+
+def attack_enemy(amount):
+    global enemy_health
+    enemy_health -= amount
+    print('You hit the enemy with your bat!!!')
+
+
+def attack_player(amount):
+    global player_health
+    player_health -= amount
+    print('You were hit by the enemies bat! ')
+
+
+print('A ' + enemy_name + ' has challenged you to a fight! ')
+print()
+while player_health > 0:
+    print(enemy_name + ' HP: ' + str(enemy_health))
+    print('Your HP: ' + str(player_health))
+    print('Bandages left: ' + str(heals_left))
+    print()
+    action = input('Attack or heal? ')
+    print()
+
+    if action == "attack":
+        player_roll = random.randint(1, 10)
+
+        if player_roll < player_accuracy * 10:
+            attack_enemy(player_damage)
+
+            if enemy_health <= 0:
+                print('You win, you beat (a) (the) ' + enemy_name +
+                      '. You have received the potion!!!')
+                break
+
+        else:
+            print('You missed your shot!')
+
+    elif action == 'heal':
+        if player_health == 80:
+            print('You have full health, you cannot use a bandage.')
+        else:
+            if heals_left:
+                heal_player(heal_amount)
+                heals_left -= 1
+            else:
+                print('You are out of bandages!!')
+
+    time.sleep(1)
+    enemy_roll = random.randint(1, 10)
+    if enemy_roll < enemy_accuracy * 10:
+        attack_player(enemy_damage)
+
+        if player_health <= 0:
+            print('You got pummeled by the enemies bat.... :( ')
+            break
+
+    else:
+        print(enemy_name + ' missed! ')
+
+    print()
+    print('******************')
+    print()
+
+if player_health <= 0:
+    sp('You sadly lost against the ' + enemy_name + ', would you like to restart the battle?'
+       )
+    time.sleep(1)
+    sp('Y/N')
+    toy = input('      >>>>>>>  ').upper()
+    toy = toy.upper()
+    if toy == 'Y':
+      sp('TOO BAD')
+
+    elif toy == 'N':
+      sp('Your loss')
+      sys.exit()
+elif enemy_health <= 0:
+  print('You won!')
+  time.sleep(2)
+  os.system('clear')
+  pass
+  
+
+
+
+    #Fix, set player to line to 276
+
+sp('You got to live!!')
+sp('2 Down, 2 to go!')
+time.sleep(2)
+os.system('clear')
+
+
+
+print(yellow + """             
+						Battle!!!""")
+
+print(blue + "              PRESS ENTER")
+
+blank = ''
+inpt = input('')
+if inpt == blank:
+    os.system("clear")
+elif input != blank:
+    print(red + 'Please press Enter')
+else:
+    print(red + 'An Error occured.\nPress Enter')
+time.sleep(2)
+os.system('clear')
+
+## Now, the game
+enemies = [
+    'Scar slave', 'scar follower', 'scar leader', 'scar fighter', 'scar spy'
+]
+
+enemy_name = random.choice(enemies)
+enemy_health = 120
+enemy_accuracy = 0.4
+enemy_damage = 15
+
+player_health = 80
+player_accuracy = 0.8
+player_damage = player_damage1
+heals_left = 3
+heal_amount = 10
+
+
+def heal_player(amount):
+    global player_health
+
+    player_health += amount
+    player_health = player_health + amount
+
+
+def attack_enemy(amount):
+    global enemy_health
+    enemy_health -= amount
+    print('You hit the enemy with your bat!!!')
+
+
+def attack_player(amount):
+    global player_health
+    player_health -= amount
+    print('You were hit by the enemies bat! ')
+
+
+print('A ' + enemy_name + ' has challenged you to a fight! ')
+print()
+while player_health > 0:
+    print(enemy_name + ' HP: ' + str(enemy_health))
+    print('Your HP: ' + str(player_health))
+    print('Bandages left: ' + str(heals_left))
+    print()
+    action = input('Attack or heal? ')
+    print()
+
+    if action == "attack":
+        player_roll = random.randint(1, 10)
+
+        if player_roll < player_accuracy * 10:
+            attack_enemy(player_damage)
+
+            if enemy_health <= 0:
+                print('You win, you beat (a) (the) ' + enemy_name +
+                      '. You have received the potion!!!')
+                break
+
+        else:
+            print('You missed your shot!')
+
+    elif action == 'heal':
+        if player_health == 80:
+            print('You have full health, you cannot use a bandage.')
+        else:
+            if heals_left:
+                heal_player(heal_amount)
+                heals_left -= 1
+            else:
+                print('You are out of bandages!!')
+
+    time.sleep(1)
+    enemy_roll = random.randint(1, 10)
+    if enemy_roll < enemy_accuracy * 10:
+        attack_player(enemy_damage)
+
+        if player_health <= 0:
+            print('You got pummeled by the enemies bat.... :( ')
+            break
+
+    else:
+        print(enemy_name + ' missed! ')
+
+    print()
+    print('******************')
+    print()
+
+if player_health <= 0:
+    sp('You sadly lost against the ' + enemy_name + ', would you like to restart the battle?'
+       )
+    time.sleep(1)
+    sp('Y/N')
+    toy = input('      >>>>>>>  ').upper()
+    toy = toy.upper()
+    if toy == 'Y':
+      sp('TOO BAD')
+
+    elif toy == 'N':
+      sp('Your loss')
+      sys.exit()
+elif enemy_health <= 0:
+  print('You won!')
+  time.sleep(2)
+  os.system('clear')
+  pass
+  
+
+
+
+    #Fix, set player to line to 276
+
+sp('You got to live!!')
+sp('3 down, 1 to go!!')
+time.sleep(2)
+os.system('clear')
+
+
+
+print(yellow + """             
+						Battle!!!""")
+
+print(blue + "              PRESS ENTER")
+
+blank = ''
+inpt = input('')
+if inpt == blank:
+    os.system("clear")
+elif input != blank:
+    print(red + 'Please press Enter')
+else:
+    print(red + 'An Error occured.\nPress Enter')
+time.sleep(2)
+os.system('clear')
+
+## Now, the game
+enemies = [
+    'Scar slave', 'scar follower', 'scar leader', 'scar fighter', 'scar spy'
+]
+
+enemy_name = random.choice(enemies)
+enemy_health = 120
+enemy_accuracy = 0.4
+enemy_damage = 15
+
+player_health = 80
+player_accuracy = 0.8
+player_damage = player_damage1
+heals_left = 3
+heal_amount = 10
+
+
+def heal_player(amount):
+    global player_health
+
+    player_health += amount
+    player_health = player_health + amount
+
+
+def attack_enemy(amount):
+    global enemy_health
+    enemy_health -= amount
+    print('You hit the enemy with your bat!!!')
+
+
+def attack_player(amount):
+    global player_health
+    player_health -= amount
+    print('You were hit by the enemies bat! ')
+
+
+print('A ' + enemy_name + ' has challenged you to a fight! ')
+print()
+while player_health > 0:
+    print(enemy_name + ' HP: ' + str(enemy_health))
+    print('Your HP: ' + str(player_health))
+    print('Bandages left: ' + str(heals_left))
+    print()
+    action = input('Attack or heal? ')
+    print()
+
+    if action == "attack":
+        player_roll = random.randint(1, 10)
+
+        if player_roll < player_accuracy * 10:
+            attack_enemy(player_damage)
+
+            if enemy_health <= 0:
+                print('You win, you beat (a) (the) ' + enemy_name +
+                      '. You have received the potion!!!')
+                break
+
+        else:
+            print('You missed your shot!')
+
+    elif action == 'heal':
+        if player_health == 80:
+            print('You have full health, you cannot use a bandage.')
+        else:
+            if heals_left:
+                heal_player(heal_amount)
+                heals_left -= 1
+            else:
+                print('You are out of bandages!!')
+
+    time.sleep(1)
+    enemy_roll = random.randint(1, 10)
+    if enemy_roll < enemy_accuracy * 10:
+        attack_player(enemy_damage)
+
+        if player_health <= 0:
+            print('You got pummeled by the enemies bat.... :( ')
+            break
+
+    else:
+        print(enemy_name + ' missed! ')
+
+    print()
+    print('******************')
+    print()
+
+if player_health <= 0:
+    sp('You sadly lost against the ' + enemy_name + ', would you like to restart the battle?'
+       )
+    time.sleep(1)
+    sp('Y/N')
+    toy = input('      >>>>>>>  ').upper()
+    toy = toy.upper()
+    if toy == 'Y':
+      sp('TOO BAD')
+
+    elif toy == 'N':
+      sp('Your loss')
+      sys.exit()
+elif enemy_health <= 0:
+  print('You won!')
+  time.sleep(2)
+  os.system('clear')
+  pass
+  
+
+
+
+    #Fix, set player to line to 276
+
+sp('You got to live!!')
+sp('You beat them!!!!')
