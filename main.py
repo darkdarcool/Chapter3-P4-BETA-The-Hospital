@@ -1,7 +1,7 @@
 player_damage1 = 30
 import os, random
 import time, sys
-
+os.system('clear')
 black = "\033[0;30m"
 red = "\033[0;31m"
 green = "\033[0;32m"
