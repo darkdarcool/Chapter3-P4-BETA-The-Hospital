@@ -943,3 +943,6 @@ elif enemy_health <= 0:
 
 sp('You got to live!!')
 sp('You beat them!!!!')
+time.sleep(2)
+os.system('clear')
+sp('"Fhew, that was a lot." Rachel said.  Yeah, ')
