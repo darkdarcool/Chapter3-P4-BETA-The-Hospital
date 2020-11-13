@@ -952,6 +952,23 @@ sp('{AFTER LOOTING THE SCAR\'S BODY, YOU FIND A SCAR BAT. YOU ADD IT TO YOUR INV
 invent = ['Bat Damage = 35 Critical hit chance = 30%', 'Scar bat Damage = 20 Critical hit chance = 70%']
 time.sleep(1)
 print(invent)
+time.sleep(2)
+os.system('clear')
+sp('The gang walks down the hall. And then they see a panel. A panel that asks for a code. Next to it was a door. A door was blocking them from going up to the elevator. "Looks like we need a code." Rachel said. "I think it is the code we got when getting all the lighs." William says. (This is the code in the last RPG, YOU DID PLAY IT DIDN\'t YOU) ')
+time.sleep(2)
+os.system('clear')
+while True:
+	print('What is the code?\n')
+	wallin = input('')
+	if wallin == '35162':
+		sp(green = 'Access Granted')
+		break
+	else:
+		sp(red + 'Access denied')
+		time.sleep(2)
+		os.system('clear')
+sp(white + 'You got the code correct!!')
+sp('"Noice" James said.')
 
 
 
