@@ -948,5 +948,10 @@ os.system('clear')
 sp('"Fhew, that was a lot." Rachel said. " Yeah, and there is probably more coming." William said.  ')
 time.sleep(2)
 os.system('clear')
-sp('They continue to walk down the hallway. ')
+sp('{AFTER LOOTING THE SCAR\'S BODY, YOU FIND A SCAR BAT. YOU ADD IT TO YOUR INVENTORY }\n')
+invent = ['Bat Damage = 35 Critical hit chance = 30%', 'Scar bat Damage = 20 Critical hit chance = 70%']
+time.sleep(1)
+print(invent)
+
+
 
