@@ -948,4 +948,5 @@ os.system('clear')
 sp('"Fhew, that was a lot." Rachel said. " Yeah, and there is probably more coming." William said.  ')
 time.sleep(2)
 os.system('clear')
+sp('They continue to walk down the hallway. ')
 
