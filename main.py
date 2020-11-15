@@ -961,7 +961,7 @@ while True:
 	print('What is the code?\n')
 	wallin = input('')
 	if wallin == '35162':
-		sp(green = 'Access Granted')
+		sp(green + 'Access Granted')
 		break
 	else:
 		sp(red + 'Access denied')
@@ -969,6 +969,18 @@ while True:
 		os.system('clear')
 sp(white + 'You got the code correct!!')
 sp('"Noice" James said.')
+sp('"That was easy, it was just the code from the last RPG story part.\nBut lets not dillydally. We have to get moving. Scars are deffinently going to start pouring into the hellhole. " William said.')
+time.sleep(2)
+os.system('clear')
+print(red + '--------------------------- Down At The Lobby ---------------------------')
+time.sleep(1)
+os.system('clear')
+sp('"Did you stop them? " The scar commander said sternly. "No sir, Th - They took down my squad, I got away from them though " The scar leader lied. "Well, you seem to be telling the truth".   ')
+time.sleep(1)
+sp('The scar commander then took aout a pistol and shot the scar leader. "WHY DID YOU DO THAT!!" Another scar leader said. "I don\'t like liers." The scar commander said. "Looks like if you want something done right, you have to do it yourself." The scar commander said.  ')
+time.sleep(2)
+os.system('clear')
+
 
 
 
