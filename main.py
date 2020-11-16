@@ -980,6 +980,10 @@ time.sleep(1)
 sp('The scar commander then took aout a pistol and shot the scar leader. "WHY DID YOU DO THAT!!" Another scar leader said. "I don\'t like liers." The scar commander said. "Looks like if you want something done right, you have to do it yourself." The scar commander said.  ')
 time.sleep(2)
 os.system('clear')
+print(blue + '------------------- Back at floor 2 -----------------')
+time.sleep(0.5)
+sp(cyan + '"Lets get into the elevator"')
+
 
 
 
