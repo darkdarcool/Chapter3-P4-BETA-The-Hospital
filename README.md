@@ -9,3 +9,5 @@ Run it on `repl.it` for the best experiecne. Just practice for terminal apps. Ho
 > Well, there is no really good answer. This lang that is being used is only for terminal apps! 
 >> In all explanation, you should run this is a termianl app so it works. It is only a text RPG.
 
+:octocat: 
+
