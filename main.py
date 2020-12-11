@@ -983,8 +983,6 @@ os.system('clear')
 print(blue + '------------------- Back at floor 2 -----------------')
 time.sleep(0.5)
 sp(cyan + '"Lets get into the elevator"')
-
-
-
-
-
+time.sleep(2)
+os.system('clear')
+sp(red + bold + ' In the event of a suprise encounter with some of these bad guys, I have a plan.')
